@@ -1,0 +1,57 @@
+.d-create-file{
+    padding: 50px;
+    border-radius: 10px;
+    border: dashed 2px grey;
+    text-align: center;
+}
+
+#form-create-item{
+    margin-left: 314px;
+    width: 50vw;
+    margin-top: 10vw;
+}
+
+.btn-main{
+    background-color: #00AB55;
+    padding: 10px 34px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgb(0 171 85 / 24%);
+
+}
+#file_name{
+    color: grey;
+    margin: 19px;
+}
+
+.form-control{
+    color: grey;
+}
+
+#item_title{
+    color: honeydew;
+}
+
+#item_desc{
+    color: honeydew;
+    
+}
+
+#exampleFormControlSelect1{
+    color: gray;
+
+}
+#item_price{
+    color: honeydew;
+
+}
+
+/* #submit{
+    background-color: rgb(231, 71, 71);
+    padding: 10px 34px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+} */
