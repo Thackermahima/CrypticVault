@@ -33,7 +33,7 @@ export const sidebarConfig = [
 
   {
     title: "Notes",
-    key: "Notes",
+    key: "notes",
     icon: getIcon("icon-park-outline:notes"),
     path: "/dashboard/notes",
     children: [
@@ -46,6 +46,12 @@ export const sidebarConfig = [
         path: "/dashboard/notes/burn",
       },
     ],
+  },
+  {
+    title: "Encrypt Mail",
+    key: "mail",
+    icon: getIcon("icon-park-outline:mail"),
+    path: "/dashboard/mail",
   },
 
   // {

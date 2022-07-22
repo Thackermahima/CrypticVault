@@ -14,6 +14,7 @@ import Alert from "./pages/Alert";
 import Access from "./pages/Access";
 import Notes from "./pages/Notes";
 import Trash from "./components/Trash";
+import ChatBox from "./components/message/ChatBox";
 
 // ----------------------------------------------------------------------
 
@@ -30,6 +31,7 @@ export default function Router() {
 
         { path: "notes/add", element: <Notes /> },
         { path: "notes/burn", element: <Trash /> },
+        { path: "mail", element: <ChatBox /> },
       ],
     },
 
