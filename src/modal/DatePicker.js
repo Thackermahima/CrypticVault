@@ -33,6 +33,9 @@ function DatePickerComponent({ value, handleChange, open, close }) {
         <DialogContent style={{ overflowX: "hidden" }}>
           <div>
             <Box style={{ marginBottom: "20px" }}>
+              Select Date to give access on particular date
+            </Box>
+            <Box style={{ marginBottom: "20px" }}>
               <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <DesktopDatePicker
                   label="Date"

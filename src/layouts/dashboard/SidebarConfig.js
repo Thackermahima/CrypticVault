@@ -31,6 +31,23 @@ export const sidebarConfig = [
     path: "/dashboard/access",
   },
 
+  {
+    title: "Notes",
+    key: "Notes",
+    icon: getIcon("icon-park-outline:notes"),
+    path: "/dashboard/notes",
+    children: [
+      {
+        title: "Add Notes",
+        path: "/dashboard/notes/add",
+      },
+      {
+        title: "Burn",
+        path: "/dashboard/notes/burn",
+      },
+    ],
+  },
+
   // {
   //   title: "Analytics",
   //   path: "/dashboard/app",

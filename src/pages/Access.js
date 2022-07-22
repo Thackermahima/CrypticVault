@@ -14,6 +14,7 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  TextField,
 } from "@mui/material";
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
@@ -84,6 +85,7 @@ function Access() {
     getMembers,
     members,
     transferToken,
+    createTaskInGelato,
   } = web3Context;
 
   const [open, setOpen] = React.useState(false);
@@ -92,24 +94,39 @@ function Access() {
   const [value, setValue] = React.useState(0);
   const [isOpen, setIsOpen] = React.useState(false);
   const [openAlert, setOpenAlert] = React.useState(false);
+  const [openDays, setOpenDays] = React.useState(false);
 
   const [isUpdated, setIsUpdated] = useState(false);
 
   const [dateValue, setDateValue] = React.useState();
   const [member, setMember] = React.useState();
 
-  const handleDateChange = (newValue) => {
+  const handleDateChange = async (newValue) => {
     setDateValue(newValue);
+    console.log(member);
+    var date = new Date(newValue);
+    var seconds = date.getTime() / 1000;
+
+    await createTaskInGelato(member.address, seconds, {
+      subject: emergencyAlert?.subject,
+      message: emergencyAlert?.message,
+      name: member.name,
+      reply_to: member.email,
+    });
   };
 
   const access = [
     {
       title: "Grant access right away",
-      value: "0",
+      value: 0,
     },
     {
-      title: "Particular Date",
-      value: "1",
+      title: "Emergency Transfer",
+      value: 1,
+    },
+    {
+      title: "On selected date",
+      value: 2,
     },
   ];
 
@@ -191,10 +208,15 @@ function Access() {
                               label="Access"
                               disabled={member.transferStatus}
                               onChange={(e) => {
-                                if (e.target.value == "1") {
-                                  setIsOpen(true);
-                                } else {
+                                console.log(e.target.value);
+                                if (e.target.value == 0) {
                                   setOpenAlert(true);
+                                  setMember(member);
+                                } else if (e.target.value == 2) {
+                                  setIsOpen(true);
+                                  setMember(member);
+                                } else {
+                                  setOpenDays(true);
                                   setMember(member);
                                 }
                               }}
@@ -255,6 +277,48 @@ function Access() {
                     onClick={() => navigate("/dashboard/alert")}
                   >
                     No
+                  </Button>
+                </DialogActions>
+              </Dialog>
+              <Dialog
+                open={openDays}
+                onClose={() => setOpenDays(false)}
+                sx="sm"
+              >
+                <DialogTitle
+                  style={{
+                    textAlign: "center",
+                  }}
+                >
+                  Emergency Transfer
+                </DialogTitle>
+                <DialogContent style={{ overflowX: "hidden" }}>
+                  <div>
+                    <Box style={{ marginBottom: "20px" }}>
+                      Add number of days for emergency transfer.
+                    </Box>
+
+                    <TextField
+                      fullWidth
+                      type="number"
+                      label="Enter number of days"
+                      name="days"
+                    />
+                  </div>
+                </DialogContent>
+                <DialogActions style={{ justifyContent: "center" }}>
+                  <Button
+                    variant="contained"
+                    disabled={loading}
+                    onClick={() => {}}
+                  >
+                    Set
+                  </Button>
+                  <Button
+                    variant="contained"
+                    onClick={() => setOpenDays(false)}
+                  >
+                    Close
                   </Button>
                 </DialogActions>
               </Dialog>

@@ -2,11 +2,16 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "crypto": [
+        "node_modules/crypto-js"
+      ]
+    }
   },
   "include": [
     "src/**/*"
-  ],
+, "scripts"  ],
   "exclude": [
     "node_modules"
   ],

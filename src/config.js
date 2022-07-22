@@ -1,2 +1,2 @@
 export const crypticVaultContract =
-  "0xf7C2cc8b4db06eD8b8779F87E845301d973c399f";
+  "0xF7CbDe3831E18067794C615CF6a633Ee719F4D14";

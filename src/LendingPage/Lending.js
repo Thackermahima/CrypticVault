@@ -90,10 +90,7 @@ export default function Lending() {
                 Digital Vault!
               </h1>
               <p className="home-body-text">
-                The Cryptic Vault helps DAO manage their role based Team
-                membership using NFTs, Payroll management, DAO Drive for
-                document management and grant role based permissions to DAO
-                members.
+                The Cryptic Vault helps to store digital assets and to share access with people you trust.
               </p>
               <div className="watch-video-button mr-2">
                 <button className="enterBtn">Learn More</button>

@@ -12,6 +12,8 @@ import Drive from "./pages/Drive";
 import Members from "./pages/Members";
 import Alert from "./pages/Alert";
 import Access from "./pages/Access";
+import Notes from "./pages/Notes";
+import Trash from "./components/Trash";
 
 // ----------------------------------------------------------------------
 
@@ -25,6 +27,9 @@ export default function Router() {
         { path: "members", element: <Members /> },
         { path: "alert", element: <Alert /> },
         { path: "access", element: <Access /> },
+
+        { path: "notes/add", element: <Notes /> },
+        { path: "notes/burn", element: <Trash /> },
       ],
     },
 

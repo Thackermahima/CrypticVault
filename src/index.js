@@ -15,17 +15,20 @@ import "react-toastify/dist/ReactToastify.css";
 import { makeStore } from "./redux/store";
 import { Provider } from "react-redux";
 import { Web3StorageContextProvider } from "./context/Web3Storage";
+import { NoteContextProvider } from "./context/CreateNoteContext";
 // ----------------------------------------------------------------------
 
 ReactDOM.render(
   <HelmetProvider>
     <Provider store={makeStore()}>
       <BrowserRouter>
+      <NoteContextProvider>
         <Web3ContextProvider>
           <Web3StorageContextProvider>
             <App />
           </Web3StorageContextProvider>
         </Web3ContextProvider>
+        </NoteContextProvider>
       </BrowserRouter>
     </Provider>
   </HelmetProvider>,
