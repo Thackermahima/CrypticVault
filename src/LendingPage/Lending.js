@@ -14,11 +14,9 @@ import "./home.css";
 
 import { Link } from "react-router-dom";
 
-
 import SubscriptionRoot from "./SubscriptionRoot";
 import ProductRoot from "./ProductRoot";
 import InvoicingRoot from "./InvoicingRoot";
-
 
 export default function Lending() {
   const RootStyle = styled(Card)(({ theme }) => ({
@@ -90,7 +88,8 @@ export default function Lending() {
                 Digital Vault!
               </h1>
               <p className="home-body-text">
-                The Cryptic Vault helps to store digital assets and to share access with people you trust.
+                The Cryptic Vault helps to store digital assets and to share
+                access with people you trust.
               </p>
               <div className="watch-video-button mr-2">
                 <button className="enterBtn">Learn More</button>
@@ -129,8 +128,6 @@ export default function Lending() {
               <div className="col-12 col-lg-4 col-md-4 mt-4">
                 <InvoicingRoot />
               </div>
-
-              
             </div>
           </div>
         </div>
@@ -152,21 +149,19 @@ export default function Lending() {
                 <p className="section-token">Create NFT Memberships</p>
               </div>
               <div className="col-12 col-lg-4 col-md-4">
-                <p className="section-token"> Create Roles for members</p>
+                <p className="section-token"> Create members</p>
               </div>
               <div className="col-12 col-lg-4 col-md-4">
                 <p className="section-token">Assign Access Permissions </p>
               </div>
               <div className="col-12 col-lg-4 col-md-4">
-                <p className="section-token">Manage Payroll </p>
+                <p className="section-token">Encrypted - Decrypted Drive </p>
               </div>
               <div className="col-12 col-lg-4 col-md-4">
-                <p className="section-token">DAO Drive - Doc management </p>
+                <p className="section-token">Encrypted - Decrypted Notes</p>
               </div>
               <div className="col-12 col-lg-4 col-md-4">
-                <p className="section-token">
-                  Whistleblower and Feedback report
-                </p>
+                <p className="section-token">Encrypted - Decrypted Email</p>
               </div>
             </div>
           </div>

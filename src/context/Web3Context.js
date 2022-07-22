@@ -134,7 +134,7 @@ export const Web3ContextProvider = (props) => {
       let tokenAddress = await crypticVaultcontractobj.getTokenAddress(
         data.address
       );
-
+      console.log(tokenAddress, "token");
       const tokenContract = new ethers.Contract(
         tokenAddress,
         crypticVaultToken.abi,
@@ -274,12 +274,14 @@ export const Web3ContextProvider = (props) => {
             tokenAddress,
             parseInt(tokenId.toString())
           );
-          let ttx = transactionTransfer.wait();
+          let ttx = await transactionTransfer.wait();
           if (ttx) {
             tx = await crypticVaultCon.setTokenId(
               parseInt(tokenId.toString()) - 1
             );
-            await sendEmail(data);
+            if (tx) {
+              await sendEmail(data);
+            }
           }
         }
       } else {

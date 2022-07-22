@@ -46,7 +46,7 @@ export default function SubscriptionRoot() {
                 />
               </IconWrapperStyle>
               <Typography variant="h4" color="#000">
-              DAO Drive
+               Drive
               </Typography>
             </RootStyle>
   );
