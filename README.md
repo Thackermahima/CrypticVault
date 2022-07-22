@@ -1,17 +1,21 @@
 ## Cryptic Vault : Your Decentralized Digital Vault!
 
+## CrypticVault is a platform to store your data and give NFT membership-based access to your vault near and dear ones.
+
 ### Key Features:
 
 - Decentralized Storage on IPFS
-- NFT based Access 
-- Information Inheritance 
+- NFT based Access
+- Information Inheritance
 - Data Encryption on Top of IPFS
 
 ### Problem:
 
-- Industry experts say that between 2.3 million and 3.7 million bitcoins have been lost. While this is for a variety of reasons, a big chunk of that lost bitcoin is from it simply disappearing with those who’ve died.
-- Billions of Dollars worth of Insurance Money is Unclaimed - Family Members are unaware of Insurance, Property Documents and many more private docs.
-- Role-based access to information for DAOs and Individuals.
+1. If something happens to a person or in case of death families are not aware of a) How much crypto person is having and especially how to get access to it b) Millions of dollars worth of insurance are unclaimed because families don't know if there was any medical insurance or life insurance. c) Property will deed etc
+
+2. no central point of failure and censorship resistance. Currently, we store our data on Dropbox, Google Drive, etc but there are chances that someone from the internal team can access our data so we have encrypted data using SHA 256 and the encrypted hash is getting stored on IPFS
+
+3. Persistent storage: Physical copy of data may get lost or damaged due to any reason but data stored on IPFS and Pinned using Filecoin are totally secure and everlasting. Even if the big bang happens on eath, data on the File coin will be accessible from other planets through satellite node which Protocol Labs team is planning :)
 
 ## It includes:
 
@@ -35,7 +39,7 @@
 
 ### Blockchain: Polygon
 
-https://github.com/devchain17/Decentra-Tool/blob/master/hardhat.config.js
+https://github.com/mansijoshi17/CrypticVault/blob/master/hardhat.config.js
 
 ``require("dotenv").config({ path: "./.env" });
 require("@nomiclabs/hardhat-waffle");
@@ -54,14 +58,6 @@ accounts: [pk_1]
 };
 ``
 
-### Contract List:
+### Contract on Polygon:
 
-**1) Bulk Mint Token Contract:** https://blockexplorer.rinkeby.boba.network/address/0x0C4DCc2dc216fF3Fe1A7A4F6c9B5D71cbA10AFC2/transactions
-
-**1) Multi Send Token Contract:** https://blockexplorer.rinkeby.boba.network/address/0x63C2464BC8b0B22e00Df459310b728414dF6BE4e/transactions
-
-
-
-
-
-
+**1) CrypticVault Contract :** https://mumbai.polygonscan.com/address/0xF7CbDe3831E18067794C615CF6a633Ee719F4D14
