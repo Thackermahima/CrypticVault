@@ -9,7 +9,7 @@
 - Information Inheritance
 - Data Encryption on Top of IPFS
 
-### Problem:
+### Problem we are solving:
 
 1. If something happens to a person or in case of death families are not aware of a) How much crypto person is having and especially how to get access to it b) Millions of dollars worth of insurance are unclaimed because families don't know if there was any medical insurance or life insurance. c) Property will deed etc
 
