@@ -19,7 +19,7 @@
 
 ## It includes:
 
-**1) Role Management:** DAO admin or any individual can create roles as per their requirement like Content Team, Video Editing Team, Tech Team, etc. as per the role, NFT will be minted and assigned to members.
+**1) Log In with Admin or Member:** DAO admin or any individual can create roles as per their requirement like Content Team, Video Editing Team, Tech Team, etc. as per the role, NFT will be minted and assigned to members.
 
 ![role](https://user-images.githubusercontent.com/105703992/168972033-3d5493f6-bb00-4cbd-b8c6-87c5a6079d09.png)
 
