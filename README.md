@@ -47,7 +47,7 @@
 
 <img width="1439" alt="notes" src="https://user-images.githubusercontent.com/54347081/180590554-dbb39725-4bbd-4a1f-b6d1-76b18e676bdf.png">
 
-**6) Encrypted Email:** Encrypted email is used to create decentralised communication between two wallet address. And all the mails are encrypted.
+**7) Encrypted Email:** Encrypted email is used to create decentralised communication between two wallet address. And all the mails are encrypted.
 
 <img width="1440" alt="Screenshot 2022-07-23 at 11 37 49 AM" src="https://user-images.githubusercontent.com/54347081/180592879-ba4e0fd1-c91e-4329-8fd2-4cbaa8f49f13.png">
 
