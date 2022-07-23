@@ -70,4 +70,10 @@ accounts: [pk_1]
 };
 ```
 
+### IPFS/Filecoin
+
+https://github.com/mansijoshi17/CrypticVault/blob/master/Filecoin.md
+
+
+
 

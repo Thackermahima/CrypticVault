@@ -1,4 +1,4 @@
-## IPFS/FileCoin
+## IPFS/Filecoin
 
 ##### https://github.com/mansijoshi17/CrypticVault/blob/master/src/context/Web3Storage.js
 
