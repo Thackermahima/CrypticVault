@@ -23,31 +23,33 @@
 
 ## It includes:
 
-**1) Sign In with Admin and Member:** Admin can create token from login with admin which will be used for membership. and in login with member, member can login with admin address which will check that member have that admin's nft or not.
+**1) Sign In with Admin and Member:** Admin can create token from sign with admin which will be used for membership. and in login with member, member can login with admin address which will check that member have that admin's nft or not.
 
 <img width="1440" alt="login" src="https://user-images.githubusercontent.com/54347081/180590440-5aef269d-1289-4edb-af1e-3d094333265b.png">
 
-**2) Decentralized Encrypted Storage :**
+**2) Decentralized Encrypted Storage :** In Drive we can store different type of file which will stored encrypted on IPFS.
 
 <img width="1430" alt="drive" src="https://user-images.githubusercontent.com/54347081/180590470-650ce8ea-f6c4-4e05-8830-5bd37adf8bc6.png">
 
-**3) Members:**
+**3) Members:** Add Members to give access of your digital vault.
 
 <img width="1440" alt="members" src="https://user-images.githubusercontent.com/54347081/180590486-08beb960-2f91-4e11-a358-c240cbc3649d.png">
 
-**4) Emergency Alert:**
+**4) Emergency Alert:** Set Emergency alert email message to notify the member about access permission.
 
 <img width="1440" alt="alert" src="https://user-images.githubusercontent.com/54347081/180590504-c721bf6b-3df4-4a11-8753-1c55760d5877.png">
 
-**5) Access Permission:**
+**5) Access Permission:** There are three ways to give access permission. 1) Give access right away which will transfer token and send email to the particular member right away 2) Emergency Transfer is set number of days the when transfer should be executed, if admin is not active from defined days. 3) On selected date is token should be transfered on particular date.
 
 <img width="1440" alt="access" src="https://user-images.githubusercontent.com/54347081/180590533-a0af52cc-434e-462f-b8e4-b754433f63dc.png">
 
-**6) Encrypted Notes:**
+**6) Encrypted Notes:** In notes, added notes will be stored encrypted on IPFS.
 
 <img width="1439" alt="notes" src="https://user-images.githubusercontent.com/54347081/180590554-dbb39725-4bbd-4a1f-b6d1-76b18e676bdf.png">
 
-**6) Encrypted Email:**
+**6) Encrypted Email:** Encrypted email is used to create decentralised communication between two wallet address. And all the mails are encrypted.
+
+<img width="1440" alt="Screenshot 2022-07-23 at 11 37 49 AM" src="https://user-images.githubusercontent.com/54347081/180592879-ba4e0fd1-c91e-4329-8fd2-4cbaa8f49f13.png">
 
 ### Blockchain: Polygon
 
@@ -112,4 +114,100 @@ https://github.com/mansijoshi17/CrypticVault/blob/master/Filecoin.md
     );
     return cid;
   }
+```
+
+### XMTP
+
+https://github.com/mansijoshi17/CrypticVault/blob/master/src/context/ChatBoxContext.js
+
+```
+import { Client, ContentTypeText } from "@xmtp/xmtp-js";
+
+ useEffect(() => {
+    async function connectWallet() {
+      setLoading(true);
+      const web3Modal = new Web3Modal();
+      const connection = await web3Modal.connect();
+      const provider = new ethers.providers.Web3Provider(connection);
+      const signer = provider.getSigner();
+      const usr = signer.getAddress();
+      if (usr) {
+        usr.then((res) => {
+          setCurrentUser(res);
+        });
+      }
+      setSigner(signer);
+      const xmtp = await Client.create(signer);
+      setXmtp(xmtp);
+      const list = await xmtp.conversations.list();
+      setUserList(list);
+      setLoading(false);
+    }
+    connectWallet();
+  }, [isUpdate]);
+
+  useEffect(() => {
+    const getConvo = async () => {
+      if (!xmtp) {
+        return;
+      }
+      setConversation(await xmtp.conversations.newConversation(peerAddress));
+    };
+    getConvo();
+  }, [xmtp, peerAddress]);
+
+  useEffect(() => {
+    const closeStream = async () => {
+      if (!stream) return;
+      await stream.return();
+    };
+    closeStream();
+  }, [peerAddress]);
+
+  useEffect(() => {
+    const getList = async () => {
+      await xmtp.conversations.newConversation(peerAddress);
+      const lst = await xmtp.conversations.list();
+      setUserList(lst);
+    };
+    if (xmtp) {
+      getList();
+    }
+  }, [conversation, peerAddress]);
+
+  useEffect(() => {
+    const listMessages = async () => {
+      if (!conversation) return;
+      const msgs = await conversation.messages({ pageSize: 100 });
+      setMessageList(msgs);
+    };
+    listMessages();
+  }, [conversation, loading, updateMessage]);
+
+  useEffect(() => {
+    const streamMessages = async () => {
+      if (!conversation) return;
+      const demoStream = await conversation.streamMessages();
+      setStream(demoStream);
+      var array = [];
+      for await (const msg of demoStream) {
+        array.push(msg);
+      }
+      setMessageList(array);
+    };
+    streamMessages();
+  }, [conversation, loading, updateMessage]);
+
+  const handleSend = useCallback(
+    async (message) => {
+      if (!conversation) return;
+      setUpdateMessage(true);
+      await conversation.send(message);
+      setUpdateMessage(false);
+    },
+
+    [conversation]
+  );
+
+
 ```
