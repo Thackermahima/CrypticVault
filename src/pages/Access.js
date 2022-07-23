@@ -162,7 +162,7 @@ function Access() {
   };
 
   return (
-    <Page title="Members |  Cryptic Vault">
+    <Page title="  Access Permission |  Cryptic Vault">
       <Container pl={0} pr={0}>
         <Stack
           direction="row"

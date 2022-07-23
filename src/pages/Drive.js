@@ -87,7 +87,7 @@ function Drive() {
   }
 
   return (
-    <Page title="Docs |  Cryptic Vault">
+    <Page title="Drive |  Cryptic Vault">
       <Container pl={0} pr={0}>
         <Stack
           direction="row"
@@ -129,7 +129,10 @@ function Drive() {
                 <Grid xs={12} sm={3} md={2} key={index}>
                   <Card>
                     {console.log(doc.file)}
-                    <Stack spacing={2} sx={{ p: 3, width:"180px", height:"200px" }} >
+                    <Stack
+                      spacing={2}
+                      sx={{ p: 3, width: "180px", height: "200px" }}
+                    >
                       <img src={handleSrc(doc.type)}></img>
                       <a href={doc.file} target={"balank"}>
                         <Typography variant="subtitle2" noWrap>

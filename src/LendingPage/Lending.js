@@ -14,9 +14,7 @@ import "./home.css";
 
 import { Link } from "react-router-dom";
 
-import SubscriptionRoot from "./SubscriptionRoot";
-import ProductRoot from "./ProductRoot";
-import InvoicingRoot from "./InvoicingRoot";
+import Features from "./Features";
 
 export default function Lending() {
   const RootStyle = styled(Card)(({ theme }) => ({
@@ -88,8 +86,8 @@ export default function Lending() {
                 Digital Vault!
               </h1>
               <p className="home-body-text">
-                The Cryptic Vault helps to store digital assets and to share
-                access with people you trust.
+                CrypticVault is a platform to store your data and give NFT
+                membership-based access to your vault near and dear ones.
               </p>
               <div className="watch-video-button mr-2">
                 <button className="enterBtn">Learn More</button>
@@ -118,15 +116,35 @@ export default function Lending() {
             </div> */}
             <div className="row">
               <div className="col-12 col-lg-4 col-md-4 mt-4">
-                <SubscriptionRoot />
+                <Features icon="ic:outline-add-to-drive" name="Drive" />
               </div>
 
               <div className="col-12 col-lg-4 col-md-4 mt-4">
-                <ProductRoot />
+                <Features icon="mdi:wallet-membership" name="NFT Memberships" />
               </div>
 
               <div className="col-12 col-lg-4 col-md-4 mt-4">
-                <InvoicingRoot />
+                <Features
+                  icon="icon-park-outline:permissions"
+                  name="Access Permission"
+                />
+              </div>
+              <div className="col-12 col-lg-4 col-md-4 mt-4">
+                <Features icon="icon-park-outline:notes" name="Notes" />
+              </div>
+
+              <div className="col-12 col-lg-4 col-md-4 mt-4">
+                <Features
+                  icon="icon-park-outline:mail"
+                  name="Encrypted Email"
+                />
+              </div>
+
+              <div className="col-12 col-lg-4 col-md-4 mt-4">
+                <Features
+                  icon="icon-park-outline:lock"
+                  name="Censorship Resistance"
+                />
               </div>
             </div>
           </div>
@@ -146,22 +164,22 @@ export default function Lending() {
           <div className="col-8 m-auto">
             <div className="row">
               <div className="col-12 col-lg-4 col-md-4">
-                <p className="section-token">Create NFT Memberships</p>
+                <p className="section-token">NFT Memberships</p>
               </div>
               <div className="col-12 col-lg-4 col-md-4">
-                <p className="section-token"> Create members</p>
+                <p className="section-token">Store encrypted files on IPFS</p>
               </div>
               <div className="col-12 col-lg-4 col-md-4">
-                <p className="section-token">Assign Access Permissions </p>
+                <p className="section-token"> Add members</p>
               </div>
               <div className="col-12 col-lg-4 col-md-4">
-                <p className="section-token">Encrypted - Decrypted Drive </p>
+                <p className="section-token">Assign Access Permissions</p>
               </div>
               <div className="col-12 col-lg-4 col-md-4">
-                <p className="section-token">Encrypted - Decrypted Notes</p>
+                <p className="section-token">Store encrypted Notes on IPFS</p>
               </div>
               <div className="col-12 col-lg-4 col-md-4">
-                <p className="section-token">Encrypted - Decrypted Email</p>
+                <p className="section-token">Store encrypted Emails on IPFS</p>
               </div>
             </div>
           </div>
