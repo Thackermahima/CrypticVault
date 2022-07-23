@@ -17,31 +17,43 @@
 
 3. Persistent storage: Physical copy of data may get lost or damaged due to any reason but data stored on IPFS and Pinned using Filecoin are totally secure and everlasting. Even if the big bang happens on eath, data on the File coin will be accessible from other planets through satellite node which Protocol Labs team is planning :)
 
+### Contract on Polygon:
+
+**1) CrypticVault Contract :** https://mumbai.polygonscan.com/address/0xF7CbDe3831E18067794C615CF6a633Ee719F4D14
+
 ## It includes:
 
-**1) Log In with Admin or Member:** DAO admin or any individual can create roles as per their requirement like Content Team, Video Editing Team, Tech Team, etc. as per the role, NFT will be minted and assigned to members.
+**1) Sign In with Admin and Member:** Admin can create token from login with admin which will be used for membership. and in login with member, member can login with admin address which will check that member have that admin's nft or not.
 
-![role](https://user-images.githubusercontent.com/105703992/168972033-3d5493f6-bb00-4cbd-b8c6-87c5a6079d09.png)
+<img width="1440" alt="login" src="https://user-images.githubusercontent.com/54347081/180590440-5aef269d-1289-4edb-af1e-3d094333265b.png">
 
-**2) NFT Membership:** DAO admin or individual can create role based NFT drop and send it to members. By receiving role based NFT, members can log in and access only a particular area of their Dashboard as per permissions granted to their role.
+**2) Decentralized Encrypted Storage :**
 
-![FireShot Capture 039 - Membership - Cryptic Vault - localhost](https://user-images.githubusercontent.com/105703992/168971690-e823e944-5889-4e6b-9813-310da177b4c8.png)
+<img width="1430" alt="drive" src="https://user-images.githubusercontent.com/54347081/180590470-650ce8ea-f6c4-4e05-8830-5bd37adf8bc6.png">
 
-![FireShot Capture 040 - Members - Cryptic Vault - localhost](https://user-images.githubusercontent.com/105703992/168971785-d4b62e5d-b419-4aa5-aa93-2268bf00ac54.png)
+**3) Members:**
 
-**3) Drive:** It is a document vault for DAO or individual where they can save important documents like invoices, legal agreements copies, and images on decentralized Web3 storage via Drive.
+<img width="1440" alt="members" src="https://user-images.githubusercontent.com/54347081/180590486-08beb960-2f91-4e11-a358-c240cbc3649d.png">
 
-![daodrive](https://user-images.githubusercontent.com/105703992/168972287-c18d338d-154c-497b-9f96-054f984cce7f.png)
+**4) Emergency Alert:**
 
-**4) Feedback / WhistleBlower complaints:** DAO members can anonymously submit feedback and for any unethical behavior, whistleblowers can raise complaints to help DAO stay aligned with their rules and regulations and terminate the membership of bad actors.
+<img width="1440" alt="alert" src="https://user-images.githubusercontent.com/54347081/180590504-c721bf6b-3df4-4a11-8753-1c55760d5877.png">
 
-![feedback](https://user-images.githubusercontent.com/105703992/168972418-2391d4bb-dfc3-4d9b-a6ff-34f815f16a12.png)
+**5) Access Permission:**
+
+<img width="1440" alt="access" src="https://user-images.githubusercontent.com/54347081/180590533-a0af52cc-434e-462f-b8e4-b754433f63dc.png">
+
+**6) Encrypted Notes:**
+
+<img width="1439" alt="notes" src="https://user-images.githubusercontent.com/54347081/180590554-dbb39725-4bbd-4a1f-b6d1-76b18e676bdf.png">
+
+**6) Encrypted Email:**
 
 ### Blockchain: Polygon
 
-https://github.com/mansijoshi17/CrypticVault/blob/master/hardhat.config.js
+https://github.com/mansijoshi17/CrypticVault-live-/blob/master/hardhat.config.js
 
-``require("dotenv").config({ path: "./.env" });
+```require("dotenv").config({ path: "./.env" });
 require("@nomiclabs/hardhat-waffle");
 
 const pk_1 = process.env.REACT_APP_PRIVATE_KEY;
@@ -56,8 +68,6 @@ accounts: [pk_1]
 },
 },
 };
-``
+```
 
-### Contract on Polygon:
 
-**1) CrypticVault Contract :** https://mumbai.polygonscan.com/address/0xF7CbDe3831E18067794C615CF6a633Ee719F4D14
