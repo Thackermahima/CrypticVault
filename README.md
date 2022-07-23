@@ -2,6 +2,9 @@
 
 ## CrypticVault is a platform to store your data and give NFT membership-based access to your vault near and dear ones.
 
+![MicrosoftTeams-image (56)](https://user-images.githubusercontent.com/54347081/180617881-9be6965e-c791-48db-b90b-77a46b17fb28.png)
+
+
 ### Key Features:
 
 - Decentralized Storage on IPFS
